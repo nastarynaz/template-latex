@@ -1,0 +1,95 @@
+\begin{thebibliography}{}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+\providecommand{\url}[1]{\href{#1}{#1}}
+\providecommand{\dodoi}[1]{doi:~\href{http://doi.org/#1}{\nolinkurl{#1}}}
+\providecommand{\doeprint}[1]{\href{http://ascl.net/#1}{\nolinkurl{http://ascl.net/#1}}}
+\providecommand{\doarXiv}[1]{\href{https://arxiv.org/abs/#1}{\nolinkurl{https://arxiv.org/abs/#1}}}
+
+\bibitem[{Asfar {et~al.}(2023)Asfar, Syarifuddin, \& Firmiaty}]{Asfar2023}
+Asfar, A., Syarifuddin, S., \& Firmiaty, S. 2023, Jurnal Agrisistem, 19, 60
+
+\bibitem[{Awan {et~al.}(2016)Awan, Atabany, \& Purwanto}]{Awan2016}
+Awan, J., Atabany, A., \& Purwanto, B.~P. 2016, Jurnal Ilmu Produksi dan Teknologi Hasil Peternakan, 4, 306
+
+\bibitem[{Desinawati \& Isnaini(2010)}]{Desinawati2010}
+Desinawati, N., \& Isnaini, N. 2010, J. Ternak Tropika, 11, 41
+
+\bibitem[{Harmayani {et~al.}(2023)Harmayani, Alimuddin, \& Azima}]{Harmayani2023}
+Harmayani, R., Alimuddin, \& Azima, F. 2023, Jurnal Sains Teknologi \& Lingkungan, 9, 368
+
+\bibitem[{Hartatik {et~al.}(2009)Hartatik, Mahardika, Widi, \& Baliarti}]{Hartatik2009}
+Hartatik, T., Mahardika, D., Widi, T., \& Baliarti, E. 2009, Buletin Peternakan, 33, 143
+
+\bibitem[{Heryani {et~al.}(2019)Heryani, Laksmi, Lestari, Laksana, Sudimartini, \& Gunawan}]{Heryani2019}
+Heryani, L., Laksmi, D., Lestari, D., {et~al.} 2019, Advances in Animal and Veterinary Sciences, 7, 904
+
+\bibitem[{Ismaya(2014)}]{Ismaya2014}
+Ismaya. 2014, Bioteknologi Inseminasi Buatan pada Sapi dan Kerbau, cetakan pertama edn. (Yogyakarta: Gadjah Mada University Press)
+
+\bibitem[{Jurame {et~al.}(2018)Jurame, Sritiasni, \& Womsiwor}]{Jurame2018}
+Jurame, S., Sritiasni, \& Womsiwor, I. 2018, Jurnal Triton, 9, 81
+
+\bibitem[{Khan {et~al.}(2015)Khan, Uddin, \& Gofur}]{Khan2015}
+Khan, M., Uddin, J., \& Gofur, M.~R. 2015, Bangladesh Livestock Journal, 1, 1
+
+\bibitem[{Kutsiyah(2017)}]{Kutsiyah2017}
+Kutsiyah, F. 2017, Sains Peternakan, 15, 70
+
+\bibitem[{Kutsiyah {et~al.}(2018)Kutsiyah, Sholeh, Zali, \& Heryadi}]{Kutsiyah2018}
+Kutsiyah, F., Sholeh, Zali, M., \& Heryadi, Y. 2018, Jurnal Ilmu dan Teknologi Peternakan, 6, 6
+
+\bibitem[{Makmur {et~al.}(2019)Makmur, Abdullah, \& Sari}]{Makmur2019}
+Makmur, A., Abdullah, M. A.~N., \& Sari, E.~M. 2019, Jurnal Peternakan Indonesia, 22, 306
+
+\bibitem[{Martini {et~al.}(2022)Martini, Pessoa, \& Rubin}]{Martini2022}
+Martini, A., Pessoa, G., \& Rubin, M. 2022, Arq. Bras. Med. Vet. Zootec., 74, 375
+
+\bibitem[{Napitupulu {et~al.}(2024)Napitupulu, Lapian, \& Pudjihastuti}]{Napitupulu2024}
+Napitupulu, F., Lapian, H., \& Pudjihastuti, E. 2024, Zootec, 44, 10
+
+\bibitem[{Pariswara {et~al.}(2021)Pariswara, Hilmia, \& Christi}]{Pariswara2021}
+Pariswara, H., Hilmia, N., \& Christi, R. 2021, Journal of Tropical Animal Production, 22, 82
+
+\bibitem[{Pelmuș {et~al.}(2024)Pelmuș, Grosu, Gras, Van, \& Rotar}]{Pelmus2024}
+Pelmuș, R., Grosu, H., Gras, M., Van, C., \& Rotar, M. 2024, Archiva Zootechnica, 27, 48
+
+\bibitem[{Prasdini \& Indarwati(2018)}]{Prasdini2018}
+Prasdini, W., \& Indarwati, R. 2018, Jurnal AgroSainTa, 2, 112
+
+\bibitem[{Putra {et~al.}(2023)Putra, Prasetia, \& Lena}]{Putra2023}
+Putra, K., Prasetia, M., \& Lena, M. 2023, Journal of Tropical Animal Research (JTAR), 4, 52
+
+\bibitem[{Putra {et~al.}(2018)Putra, Sumadi, Hartatik, \& Saumar}]{Putra2018}
+Putra, W., Sumadi, Hartatik, T., \& Saumar, H. 2018, Jurnal Peternakan, 15, 89
+
+\bibitem[{Samkange {et~al.}(2019)Samkange, Kandiwa, Mushonga, Bishi, Muradzikwa, \& Madzingira}]{Samkange2019}
+Samkange, A., Kandiwa, E., Mushonga, B., {et~al.} 2019, Tropical Animal Health and Production, 45, 1
+
+\bibitem[{Sartika {et~al.}(2020)Sartika, Mudawamah, \& Puspitarini}]{Sartika2020}
+Sartika, D., Mudawamah, \& Puspitarini, O. 2020, Jurnal Ternak, 11, 39
+
+\bibitem[{Sumiyanti {et~al.}(2023)Sumiyanti, Ngangi, \& Paputungan}]{Sumiyanti2023}
+Sumiyanti, Ngangi, L., \& Paputungan, U. 2023, Zootec, 43, 280
+
+\bibitem[{Susilawati(2017)}]{Susilawati2017}
+Susilawati, T. 2017, Sapi Lokal Indonesia (Jawa Timur dan Bali), cetakan pertama edn. (Malang: UB Press)
+
+\bibitem[{Tophianong {et~al.}(2023)Tophianong, Datta, Utami, Foeh, Gaina, Simarmata, Pandarangga, Sitompul, \& Deta}]{Tophianong2023}
+Tophianong, T., Datta, F., Utami, T., {et~al.} 2023, Jurnal Kajian Veteriner, 11, 62
+
+\bibitem[{Wanma {et~al.}(2022)Wanma, Supriyantono, Mulyadi, \& Sambodo}]{Wanma2022}
+Wanma, F., Supriyantono, A., Mulyadi, \& Sambodo, P. 2022, Jurnal Ilmu Peternakan dan Veteriner Tropis, 12, 175
+
+\bibitem[{Wicaksana {et~al.}(2024)Wicaksana, Arifin, \& Santi}]{Wicaksana2024}
+Wicaksana, K., Arifin, D., \& Santi, M. 2024, BEST Journal (Biology Education, Sains and Technology), 7, 716
+
+\bibitem[{Wisono {et~al.}(2015)Wisono, Nuryadi, \& Suyadi}]{Wisono2015}
+Wisono, D., Nuryadi, \& Suyadi. 2015, Performan Reproduksi Sapi Madura Induk dengan Perkawinan Inseminasi Buatan di Kabupaten Pamekasan
+
+\bibitem[{Wulansari {et~al.}(2023)Wulansari, Kusumawati, Krisnaningsih, Robba, Chanafi, Ramsiati, \& Ariyanti}]{Wulansari2023}
+Wulansari, W., Kusumawati, E., Krisnaningsih, A., {et~al.} 2023, Jurnal Ilmiah Ilmu-Ilmu Peternakan, 26, 163
+
+\bibitem[{Zali {et~al.}(2019)Zali, Fanani, Ihsan, \& Nugroho}]{Zali2019}
+Zali, M., Fanani, Z., Ihsan, M., \& Nugroho, B. 2019, Jurnal Sains Peternakan, 7, 102
+
+\end{thebibliography}
