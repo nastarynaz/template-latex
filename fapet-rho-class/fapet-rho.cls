@@ -1,11 +1,11 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % --------------------------------------------------------
-% RMxAA Rho
+% FAPET Rho
 % LaTeX Class
-% Version X.X.X (11/06/2025)
+% Version 1.0.0 (18/10/2025)
 %
-% Authors: Carlos Román-Zúñiga & Irene Cruz-González
-% Based on Rho LaTeX developed by
+% Based on RMxAA Rho by Carlos Román-Zúñiga & Irene Cruz-González
+% Original Rho LaTeX developed by
 % Guillermo Jimenez (memo.notess1@gmail.com)
 % Eduardo Gracidas (eduardo.gracidas29@gmail.com)
 % --------------------------------------------------------
@@ -20,7 +20,7 @@
 %----------------------------------------------------------
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{rmaa-rho-class/rmaa-rho}[2025/06/11 RMxAA Rho LaTeX class]
+\ProvidesClass{fapet-rho-class/fapet-rho}[2025/10/18 FAPET Rho LaTeX class]
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{extarticle}}
 \ProcessOptions\relax
 \LoadClass[twocolumn]{extarticle}
@@ -40,7 +40,7 @@
 
 \RequirePackage[utf8]{inputenc}
 \RequirePackage{array} 
-\RequirePackage{rmaa-rho-class/deluxetable}
+\RequirePackage{fapet-rho-class/deluxetable}
 \RequirePackage{etoolbox}
 \RequirePackage[framemethod=tikz]{mdframed}
 \RequirePackage{titling}
@@ -91,8 +91,8 @@
 % RHO CUSTOM PACKAGES (location/name)
 %----------------------------------------------------------
 
-\RequirePackage{rmaa-rho-class/rhobabel}
-\RequirePackage{rmaa-rho-class/rhoenvs}
+\RequirePackage{fapet-rho-class/rhobabel}
+\RequirePackage{fapet-rho-class/rhoenvs}
 
 %----------------------------------------------------------
 % PAGE LAYOUT
@@ -212,34 +212,34 @@
 \renewcommand{\footrulewidth}{0pt} % No footer rule
 
 %----------------------------------------------------------
-% RHO START ~ LETTRINE
+% FAPET START ~ LETTRINE
 %----------------------------------------------------------
 
 \newcommand{\dropcapfont}{\color{rhocolor}\bfseries\fontsize{25pt}{28pt}\selectfont}
-\newcommand{\RMxAAstart}[1]{\lettrine[lines=2,lraise=0,findent=2pt, nindent=0em]{{\dropcapfont{#1}}}{}}
+\newcommand{\FAPETstart}[1]{\lettrine[lines=2,lraise=0,findent=2pt, nindent=0em]{{\dropcapfont{#1}}}{}}
 
 %----------------------------------------------------------
-% SET RMXAA TEMPLATE (ARTICLE OR CONFERENCE)
+% SET FAPET TEMPLATE (ARTICLE OR CONFERENCE)
 %----------------------------------------------------------
 
-\newcommand{\RMxAC}{RMxAC}
-\newcommand{\RMxAA}{RMxAA}
+\newcommand{\FAPETConference}{FAPET Conference}
+\newcommand{\FAPET}{FAPET}
 
-\newcommand{\RMxAAtemplatetype}[1]{%
-    \ifdefequal{#1}{\RMxAC}{%  % Si se selecciona RMxAC (conferencias)
+\newcommand{\FAPETtemplatetype}[1]{%
+    \ifdefequal{#1}{\FAPETConference}{%  % Si se selecciona FAPET Conference
         % Configuración para conferencias (amarillo)
         \def\rhotheme{rhoyellow}% Color amarillo
-        \def\logofile{rmaa-rho-class/RMXAA-horizontal-amarillo.jpg}% Logo amarillo
-        \def\templatetype{RMxAC}% Tipo de plantilla
-    }{%  % Caso predeterminado: RMxAA (artículos)
+        \def\logofile{fapet-rho-class/RMXAA-horizontal-amarillo.jpg}% Logo amarillo
+        \def\templatetype{FAPET Conference}% Tipo de plantilla
+    }{%  % Caso predeterminado: FAPET (artículos)
         % Configuración predeterminada para artículos (azul)
         \def\rhotheme{rhocolor}% Color azul
-        %\def\logofile{rmaa-rho-class/LogoRMxAazul.jpg}% Logo azul
-        \def\logofile{rmaa-rho-class/rmxaa-horizontal-azul.png}% Logo azul
-        \def\templatetype{RMxAA}% Tipo de plantilla
+        %\def\logofile{fapet-rho-class/LogoFAPETazul.jpg}% Logo azul
+        \def\logofile{fapet-rho-class/rmxaa-horizontal-azul.png}% Logo azul
+        \def\templatetype{FAPET}% Tipo de plantilla
     }%
 }
-\usepackage{rmaa-rho-class/deluxetable}
+\usepackage{fapet-rho-class/deluxetable}
 %----------------------------------------------------------
 % CORRESPONDING AUTHOR SECTION
 %----------------------------------------------------------
@@ -598,14 +598,14 @@
 % MACRO DEFINITIONS
 % ----------------------------------------------------------
 
-\newcommand{\RMAA}{RMxAA}
-\newcommand{\RMAAlong}{Revista Mexicana de Astronom\'{\i}a y Astrof\'{\i}sica}
-\newcommand{\RMAASC}{RMxAC)}
-\newcommand{\RMAASClong}{\RMAA\ Serie de Conferencias}
+\newcommand{\FAPETshort}{FAPET}
+\newcommand{\FAPETlong}{Fakultas Peternakan Universitas Gadjah Mada}
+\newcommand{\FAPETConferenceShort}{FAPET Conference}
+\newcommand{\FAPETConferenceLong}{\FAPETshort\ Conference Series}
 \newcommand{\ibidrule}{\rule[-0.03cm]{4.7em}{.01cm}.\ }
 %\newcommand{\ThisVolume}[1]{%
-%  \@year, \if@proceedings\RMAASC\else\RMAA\fi, \@volume,
- % \if@book\oldpageref{#1:RMAAFirstPage}\else 000\fi\ (this volume)}
+%  \@year, \if@proceedings\FAPETConferenceShort\else\FAPETshort\fi, \@volume,
+ % \if@book\oldpageref{#1:FAPETFirstPage}\else 000\fi\ (this volume)}
 \newcommand{\etal}{et al.\@}
 \def\acknowledgments{\vskip 3ex plus .8ex minus .4ex}
 \let\acknowledgements=\acknowledgments                  % second spelling
@@ -780,7 +780,7 @@
 %\newcommand\sq{\hbox{\rlap{$\sqcap$}$\sqcup$}}
 \newcommand{\romn}[1] {{\mathrm #1}}
 
-%INICIO de tablas clase rmaa.cls
+%INICIO de tablas clase fapet.cls
 \long\def\@caption#1[#2]#3{%
   \par
 %%  \addcontentsline{\csname ext@#1\endcsname}{#1}%
@@ -817,7 +817,7 @@
 \newcommand{\tabnotetext}[2]{%
   \multicolumn{\@tablecols}{@{}p{\tabnotewidth}@{}}{\small\textsuperscript{#1}#2}\\}
 \newlength{\tabnotewidth}
-%FIN de tablas clase rmaa.cls
+%FIN de tablas clase fapet.cls
 
 \newenvironment{appendices}{\par
   \begingroup

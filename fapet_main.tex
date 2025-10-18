@@ -1,10 +1,13 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % --------------------------------------------------------
-% RMxAA Rho
+% FAPET UGM Rho
 % LaTeX Template
-% Version X.X.X (25/06/2025)
+% Version 1.0.0 (18/10/2025)
 %
-% Authors: 
+% Adapted for:
+% Fakultas Peternakan UGM
+% 
+% Original Authors: 
 % Carlos Román-Zúñiga (croman@astro.unam.mx)
 % Irene Cruz-Gonzaélz )icruzgonzalez@astro.unam.mx)
 % Contributors:
@@ -25,12 +28,12 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Sugerencia de usar 9pt 
-\documentclass[9pt,article,twoside]{rmaa-rho-class/rmaa-rho}
-\RMxAAtemplatetype{\RMxAA} % Select your article type
-% {\RMxAA} article template
-% {\RMxAC} conference template
+\documentclass[9pt,article,twoside]{fapet-rho-class/fapet-rho}
+\FAPETtemplatetype{\FAPET} % Select your article type
+% {\FAPET} article template
+% {\FAPETConference} conference template
 
-\newcommand\rmaatex{RMxAA~\LaTeX}
+\newcommand\fapettex{FAPET~\LaTeX}
 \newcommand{\CS}[1]{\texttt{\textbackslash #1}}
 
 %----------------------------------------------------------
@@ -42,7 +45,7 @@
 \setcounter{page}{30}
 \pages{30-36}
 \thisyear{2025}
-\doi{\href{https://www.astroscu.unam.mx/rmaa/RMxAA..XX-X}{https://www.astroscu.unam.mx/rmaa/RMxAA..XX-X}}
+\doi{\href{https://fapet.ugm.ac.id/}{https://fapet.ugm.ac.id/}}
 
 \newenvironment{Example}
 {\begin{list}{}{\setlength{\leftmargin}{10pt}\setlength{\rightmargin}{10pt}}%
@@ -53,7 +56,7 @@
 % TITLE
 %----------------------------------------------------------
 
-\title{\rmaatex ~ template for article preparation  v4.1}
+\title{\fapettex ~ template for article preparation  v4.1}
 
 %----------------------------------------------------------
 % AUTHORS AND AFFILIATIONS
@@ -77,7 +80,7 @@
 %----------------------------------------------------------
 
 \leadauthor{Román-Zúñiga et al.}
-\smalltitle{LaTex Macro RMxAA}
+\smalltitle{LaTex Macro FAPET}
 
 %----------------------------------------------------------
 % ARTICLE INFORMATION
@@ -103,7 +106,7 @@
 %----------------------------------------------------------
 
 \begin{abstract}
-    This document (\texttt{rmxaa$\_$main.tex}---last updated August 2025) provides a brief tutorial on the use of version 4.1 of the \texttt{\rmaatex} macros and can also serve as  a template for the preparation of papers to be published in the Main Journal of the Revista Mexicana de Astronomía y Astrofísica. It provides brief tutorial information and common rules for authors. We have included information about the section content, as well as examples of the figures, tables, and code lines. We are making use of the rho($\rho$) \LaTeX ~class, specially designed for academic purposes. It is assumed that you are already familiar with the rudiments of \LaTeX{}. In case you are not, we recommend the manuals provided by Overleaf (\url{https://www.overleaf.com/learn/latex/Tutorials}).
+    This document (\texttt{fapet$\_$main.tex}---last updated August 2025) provides a brief tutorial on the use of version 4.1 of the \texttt{\fapettex} macros and can also serve as  a template for the preparation of academic papers for Fakultas Peternakan UGM. It provides brief tutorial information and common rules for authors. We have included information about the section content, as well as examples of the figures, tables, and code lines. We are making use of the rho($\rho$) \LaTeX ~class, specially designed for academic purposes. It is assumed that you are already familiar with the rudiments of \LaTeX{}. In case you are not, we recommend the manuals provided by Overleaf (\url{https://www.overleaf.com/learn/latex/Tutorials}).
 \end{abstract}
 
 \keywords{keyword 1, keyword 2, keyword 3, keyword 4, keyword 5}
@@ -113,7 +116,7 @@
 %----------------------------------------------------------
 
 \begin{resumen}
-    Este documento (\texttt{rmxaa$\_$main.tex}--- última actualización Agosto, 2025) describe de manera breve el uso de la versión 4.1 de los macros \texttt{\rmaatex} y funciona como un templete común para la preparación de artículos que se deseen publicar en la parte principal de la Revista Mexicana de Astronomía y Astrofísica. El documento provee textos instructivos breves y reglas básicas para los autores. hemos incluído información sobre el contenido de las secciones, así como ejemplos de figuras, tablas y la inclusión de líneas de código. Se hace uso de la clase rho ($\rho$) \LaTeX, especialmente diseñada para propósitos académicos. Se asume que el autor está familiarizado con los rudimentos de \LaTeX{}. En caso de que no sea así, recomendamos los manuales que provee la plataforma Overleaf (\url{https://www.overleaf.com/learn/latex/Tutorials}).
+    Este documento (\texttt{fapet$\_$main.tex}--- última actualización Agosto, 2025) describe de manera breve el uso de la versión 4.1 de los macros \texttt{\fapettex} y funciona como un templete común para la preparación de artículos académicos de la Fakultas Peternakan UGM. El documento provee textos instructivos breves y reglas básicas para los autores. hemos incluído información sobre el contenido de las secciones, así como ejemplos de figuras, tablas y la inclusión de líneas de código. Se hace uso de la clase rho ($\rho$) \LaTeX, especialmente diseñada para propósitos académicos. Se asume que el autor está familiarizado con los rudimentos de \LaTeX{}. En caso de que no sea así, recomendamos los manuales que provee la plataforma Overleaf (\url{https://www.overleaf.com/learn/latex/Tutorials}).
 \end{resumen}
 
 
@@ -130,26 +133,26 @@
 
 \section{INTRODUCTION}
 
-    \RMxAAstart{W}elcome to the \rmaatex template to prepare your academic article. Articles considered for publication in the main journal can be easily prepared using this template. The style of this template is based on the \textit{rho class} style\footnote{The RMxAA paper template is based on the rho LATEX class,
+    \FAPETstart{W}elcome to the \fapettex template to prepare your academic article. Articles considered for publication in the main journal can be easily prepared using this template. The style of this template is based on the \textit{rho class} style\footnote{The FAPET paper template is based on the rho LATEX class,
 created by Luis Guillermo Jiménez López and Eduardo Gracidas Reyes.}. It requires minimal or no typesetting adjustments to provide a version of your manuscript organization that is close to the final printed version. This style also has ample margins to allow for a comfortable number of words per line and leaves room for marginal notes to be added.
 
-    The version of the rmaa-rho document class described in this User Guide is 1.0 (\today). Its use requires a relatively recent version of \LaTeX{}, although it is optimized to work directly online using \textbf{Overleaf}. The current version of the \LaTeX{} Project Public License is 1.3c (2008).  For the author who requires a general introduction to \LaTeX{}, we recommend starting at The LaTeX Project website \url{https://www.latex-project.org/about/}, or using the Overleaf LaTeX guide \url{https://www.overleaf.com/learn/latex/Free_online_introduction_to_LaTeX_(part_1)}. 
+    The version of the fapet-rho document class described in this User Guide is 1.0 (\today). Its use requires a relatively recent version of \LaTeX{}, although it is optimized to work directly online using \textbf{Overleaf}. The current version of the \LaTeX{} Project Public License is 1.3c (2008).  For the author who requires a general introduction to \LaTeX{}, we recommend starting at The LaTeX Project website \url{https://www.latex-project.org/about/}, or using the Overleaf LaTeX guide \url{https://www.overleaf.com/learn/latex/Free_online_introduction_to_LaTeX_(part_1)}. 
 
 \section{PREAMBLE}
 
     The first line to appear in your document should be 
 
     \bigskip
-    \CS{documentclass}\verb+{rmaa-rho}+
+    \CS{documentclass}\verb+{fapet-rho}+
     
     \bigskip
     or
     
     \bigskip
-    \CS{documentclass}[\textbf{optionlist}]\verb+{rmaa-rho}+
+    \CS{documentclass}[\textbf{optionlist}]\verb+{fapet-rho}+
     
     \bigskip
-    \noindent which configures the document to use the rmaa class, using the default \texttt{manuscript} option, which is designed for use by authors who submit articles to the main RMxAA journal. The following commands can be used after the \verb|documentclass| command, but before \verb|\begin{document}|.
+    \noindent which configures the document to use the fapet class, using the default \texttt{manuscript} option, which is designed for use by authors who submit articles to the main FAPET journal. The following commands can be used after the \verb|documentclass| command, but before \verb|\begin{document}|.
 
     \subsection{Title}
 
@@ -177,7 +180,7 @@ created by Luis Guillermo Jiménez López and Eduardo Gracidas Reyes.}. It requi
     
     \subsection{Footer information}
     
-        The \CS{leadauthor} command is used to provide the last name and initials of the leading author of the article, and will be visible at the top of every odd-numbered page. Please do not modify the text of the \CS{smalltitle} and \CS{institution} commands, which define the footer text at the bottom of the first page of every article in the RMxAA.
+        The \CS{leadauthor} command is used to provide the last name and initials of the leading author of the article, and will be visible at the top of every odd-numbered page. Please do not modify the text of the \CS{smalltitle} and \CS{institution} commands, which define the footer text at the bottom of the first page of every article in the FAPET.
     
     \subsection{Corresponding author information}
     
@@ -220,7 +223,7 @@ created by Luis Guillermo Jiménez López and Eduardo Gracidas Reyes.}. It requi
     
     The first command after the \CS{begin}\verb+{document}+ should be \CS{maketitle}. This will format the Title, Author(s), Abstract, Resumen, and Keywords sections.
     
-    Within the main body of the document, all standard \LaTeX{} commands can be used. The commands provided by many optional packages distributed with \LaTeX{} may also be used as long as the package is loaded using the \CS{usepackage} command in the preamble. However, authors are requested to avoid using commands that change the document fonts, page layout, or other 'stylistic' parameters. We should also note that not all optional packages have been tested for compatibility with the rmaa\_rho class.
+    Within the main body of the document, all standard \LaTeX{} commands can be used. The commands provided by many optional packages distributed with \LaTeX{} may also be used as long as the package is loaded using the \CS{usepackage} command in the preamble. However, authors are requested to avoid using commands that change the document fonts, page layout, or other 'stylistic' parameters. We should also note that not all optional packages have been tested for compatibility with the fapet\_rho class.
 
     \begin{figure*}[t]
         \centering                
@@ -245,7 +248,7 @@ created by Luis Guillermo Jiménez López and Eduardo Gracidas Reyes.}. It requi
 
     Please use standard \LaTeX\ sectioning commands to subdivide your document. You should use mixed cases for the section titles, although in the current style, this only matters at the level of \CS{subsection} and below.
 
-    These will be automatically typed in the RMxAA style. Cross-referencing is made easier by the use of the \CS{label} \verb+{LABEL}+ command immediately after each sectioning command, where the LABEL text is a mnemonic string. Elsewhere in the document, the section can then be referred to as \S \CS{ref} \verb+{LABEL}+. The \CS{label} command can also be used with equations, figures, and tables (see below). 
+    These will be automatically typed in the FAPET style. Cross-referencing is made easier by the use of the \CS{label} \verb+{LABEL}+ command immediately after each sectioning command, where the LABEL text is a mnemonic string. Elsewhere in the document, the section can then be referred to as \S \CS{ref} \verb+{LABEL}+. The \CS{label} command can also be used with equations, figures, and tables (see below). 
 
     It is preferable to use the \CS{label}/\CS{ref} mechanism for cross-references to minimize the chance of errors and allow automatic hyperlinks in the PDF output. The style that should be used for cross-references is, for example, Figure 3, Table 1, Equation (12), and \S 5.1, where the symbol of the section “§” is produced by the \LaTeX{} command “\S” \ S.
 
@@ -384,7 +387,7 @@ created by Luis Guillermo Jiménez López and Eduardo Gracidas Reyes.}. It requi
 
     \section{CONCEPT HIGHLIGHT BOX} 
 
-    The new \rmaatex\ macro allows the authors to use a colored box to highlight a concept or equation, as shown in this example. The label and reference points of the section are included. Example: See the Concept box in Section~\ref{box:box1}.  
+    The new \fapettex\ macro allows the authors to use a colored box to highlight a concept or equation, as shown in this example. The label and reference points of the section are included. Example: See the Concept box in Section~\ref{box:box1}.  
 
 
     \begin{figure*}[ht]
@@ -459,9 +462,9 @@ created by Luis Guillermo Jiménez López and Eduardo Gracidas Reyes.}. It requi
     
  The third example of tables is shown in Table~\ref{tab:pwlstable}, where we show a more complex table rotated sideways to fit in the landscape mode. 
 
- RMxAA uses the \LaTeX package \texttt{tabular}, which is adequate for most applications in this context. A good tutorial for tables, with direct applications of the \texttt{tabular} can be found in \url{https://www.overleaf.com/learn/latex/Tables}. 
+ FAPET uses the \LaTeX package \texttt{tabular}, which is adequate for most applications in this context. A good tutorial for tables, with direct applications of the \texttt{tabular} can be found in \url{https://www.overleaf.com/learn/latex/Tables}. 
 
- We do not recommend publishing very long tables in your paper. Large data collections may be more useful to readers in a machine-readable format (MRT). In the manuscript, a table with fewer rows may serve as a guide for the content of the MRT document. Please contact our editors to allocate direct link access to MRT tables in the RMxAA web page for the published version of your manuscript. 
+ We do not recommend publishing very long tables in your paper. Large data collections may be more useful to readers in a machine-readable format (MRT). In the manuscript, a table with fewer rows may serve as a guide for the content of the MRT document. Please contact our editors to allocate direct link access to MRT tables in the FAPET web page for the published version of your manuscript. 
 
 %\newpage
 
@@ -471,7 +474,7 @@ For observational research, authors must include a brief list of facilities and 
 
 \section{REFERENCE STYLE}
 
-    Our default formatting for references uses the journal-naming system from the AASTex style and the Astrophysics Data System (ADS). RMxAA follows the ADS bibliographic codes for both refereed \url{https://adsabs.harvard.edu/abs_doc/refereed.html} and non-refereed \url{https://adsabs.harvard.edu/abs_doc/non_refereed.html} publications.
+    Our default formatting for references uses the journal-naming system from the AASTex style and the Astrophysics Data System (ADS). FAPET follows the ADS bibliographic codes for both refereed \url{https://adsabs.harvard.edu/abs_doc/refereed.html} and non-refereed \url{https://adsabs.harvard.edu/abs_doc/non_refereed.html} publications.
     
     If a paper has more than five authors, only the first three will be listed, followed by ``et al.". The DOI of each publication was also included in the dataset. At the end of this document, you will find an example of the default reference formatting. 
 
@@ -480,11 +483,11 @@ For observational research, authors must include a brief list of facilities and 
     The usual commands \CS{citep} for reference in parentheses, as in \citep{Roman23},  and \CS{citet} for references with year in parentheses, as in \citet{Roman23}, are used in the main body of the article.
 
     Authors must include their bibliography file with their manuscript, i.e. the 
-    bib file. The {\bf rmxaa.bib file} is an example of a bib file that serves as a guide.
+    bib file. The {\bf fapet.bib file} is an example of a bib file that serves as a guide.
 %----------------------------------------------------------
 
 \renewcommand{\refname}{REFERENCES}
-\bibliography{rmaa}
+\bibliography{fapet}
 
 %----------------------------------------------------------
 
