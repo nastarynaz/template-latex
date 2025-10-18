@@ -40,12 +40,14 @@
 % JOURNAL/HEADER INFORMATION
 %----------------------------------------------------------
 
-\vol{61}
+\vol{49}
+\issue{3}
 % Counter page
-\setcounter{page}{30}
-\pages{30-36}
+\setcounter{page}{164}
+\pages{164-171}
+\monthyear{August 2025}
 \thisyear{2025}
-\doi{\href{https://fapet.ugm.ac.id/}{https://fapet.ugm.ac.id/}}
+\doi{\href{http://buletinpeternakan.fapet.ugm.ac.id/}{http://buletinpeternakan.fapet.ugm.ac.id/}}
 
 \newenvironment{Example}
 {\begin{list}{}{\setlength{\leftmargin}{10pt}\setlength{\rightmargin}{10pt}}%
@@ -56,7 +58,7 @@
 % TITLE
 %----------------------------------------------------------
 
-\title{\fapettex ~ template for article preparation  v4.1}
+\title{Reproductive Performance of Madura Cows at Various Grades in the Breeding Center of Pamekasan Regency }
 
 %----------------------------------------------------------
 % AUTHORS AND AFFILIATIONS
@@ -96,10 +98,7 @@
 
 \license{Texto de la licencia aquí}
 
-% incluir Resumen y Abstract
-
 \setbool{rho-abstract}{true} % Set false to hide the abstract
-\setbool{rho-resumen}{true} % Set false to hide the abstract
 
 %----------------------------------------------------------
 % ABSTRACT AND kEYWORDS
@@ -110,17 +109,6 @@
 \end{abstract}
 
 \keywords{keyword 1, keyword 2, keyword 3, keyword 4, keyword 5}
-
-%----------------------------------------------------------
-% RESUMEN Y PALABRAS CLAVES
-%----------------------------------------------------------
-
-\begin{resumen}
-    Este documento (\texttt{fapet$\_$main.tex}--- última actualización Agosto, 2025) describe de manera breve el uso de la versión 4.1 de los macros \texttt{\fapettex} y funciona como un templete común para la preparación de artículos académicos de la Fakultas Peternakan UGM. El documento provee textos instructivos breves y reglas básicas para los autores. hemos incluído información sobre el contenido de las secciones, así como ejemplos de figuras, tablas y la inclusión de líneas de código. Se hace uso de la clase rho ($\rho$) \LaTeX, especialmente diseñada para propósitos académicos. Se asume que el autor está familiarizado con los rudimentos de \LaTeX{}. En caso de que no sea así, recomendamos los manuales que provee la plataforma Overleaf (\url{https://www.overleaf.com/learn/latex/Tutorials}).
-\end{resumen}
-
-
-%\pclave{palabra clave 1, palabra clave 2, palabra clave 3}
 
 %----------------------------------------------------------
 
@@ -192,11 +180,9 @@ created by Luis Guillermo Jiménez López and Eduardo Gracidas Reyes.}. It requi
     
     \subsection{Abstract}
     
-        In this section, you need to provide the abstract in both Spanish and English. The abstract text may contain several paragraphs, but it should not be overly long, since both abstracts must fit on the first page\footnote{this is a footnote}. The recommended length is 200 words for both English and Spanish abstracts. If the authors are unable to provide a Spanish version of the abstract, you can use the same text as the English abstract, and our editors will take care of it.
+        The abstract text may contain several paragraphs, but it should not be overly long\footnote{this is a footnote}. The recommended length is 200 words for the abstract.
     
-        The text for the {\bf abstract} and the {\bf resumen} is placed with the \verb|\begin{abstract} \end{abstract}| and \verb|\begin{resumen} \end{resumen}| commands, respectively. 
-        
-        %Below the abstract, a minimum of three keywords and a maximum of five keywords must be placed using the command \verb|\keywords{}|. %Equivalently, the keywords provided as "palabras clave" in Spanish using the command \verb|\pclave{}| will be taken care of by the editors.
+        The text for the {\bf abstract} is placed with the \verb|\begin{abstract} \end{abstract}| command.
 
         \begin{figure}[ht]
             \centering
@@ -221,7 +207,7 @@ created by Luis Guillermo Jiménez López and Eduardo Gracidas Reyes.}. It requi
     \CS{end}\verb+{document}+
     \bigskip
     
-    The first command after the \CS{begin}\verb+{document}+ should be \CS{maketitle}. This will format the Title, Author(s), Abstract, Resumen, and Keywords sections.
+    The first command after the \CS{begin}\verb+{document}+ should be \CS{maketitle}. This will format the Title, Author(s), Abstract, and Keywords sections.
     
     Within the main body of the document, all standard \LaTeX{} commands can be used. The commands provided by many optional packages distributed with \LaTeX{} may also be used as long as the package is loaded using the \CS{usepackage} command in the preamble. However, authors are requested to avoid using commands that change the document fonts, page layout, or other 'stylistic' parameters. We should also note that not all optional packages have been tested for compatibility with the fapet\_rho class.
 

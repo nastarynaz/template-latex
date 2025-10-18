@@ -31,7 +31,7 @@
 \let\oldtablenotetext\tablenotetext
 
 % --- Continúa con el resto de paquetes ---
-\AtBeginDocument{\linenumbers}
+%\AtBeginDocument{\linenumbers}  % Commented out to disable line numbers
 \AtEndOfClass{\RequirePackage{microtype}}
 
 %----------------------------------------------------------
@@ -148,9 +148,56 @@
 % FONTS
 %----------------------------------------------------------
 
-\usepackage[notextcomp]{stix2}
-\RequirePackage[scaled]{helvet}
-\renewcommand{\ttdefault}{lmtt}
+% Check compiler: XeLaTeX/LuaLaTeX for custom fonts, or pdfLaTeX for default
+\RequirePackage{ifxetex,ifluatex}
+\newif\ifxetexorluatex
+\ifxetex
+  \xetexorluatextrue
+\else
+  \ifluatex
+    \xetexorluatextrue
+  \else
+    \xetexorluatexfalse
+  \fi
+\fi
+
+\ifxetexorluatex
+  % Using XeLaTeX or LuaLaTeX - Custom Myriad Pro Font
+  \RequirePackage{fontspec}
+  
+  % Main font: Myriad Pro
+  \setmainfont{MyriadPro}[
+    Path = ./fonts/,
+    Extension = .OTF,
+    UprightFont = *-Regular,
+    BoldFont = *-Bold,
+    ItalicFont = *-CondIt,
+    BoldItalicFont = *-BoldIt,
+    SmallCapsFont = *-Regular,
+    SmallCapsFeatures = {Letters=SmallCaps}
+  ]
+  
+  % Sans-serif: Myriad Pro (same as main for consistency)
+  \setsansfont{MyriadPro}[
+    Path = ./fonts/,
+    Extension = .OTF,
+    UprightFont = *-Regular,
+    BoldFont = *-SemiBold,
+    ItalicFont = *-CondIt,
+    BoldItalicFont = *-SemiBoldIt
+  ]
+  
+  % Monospace: Use Courier (system font) instead
+  \setmonofont{Courier New}[
+    Scale = 0.9
+  ]
+  
+\else
+  % Using pdfLaTeX - Default fonts
+  \usepackage[notextcomp]{stix2}
+  \RequirePackage[scaled]{helvet}
+  \renewcommand{\ttdefault}{lmtt}
+\fi
 
 %----------------------------------------------------------
 % URLs STYLE
@@ -186,6 +233,8 @@
 \newcommand{\leadauthor}[1]{\def\@leadauthor{#1}}
 \newcommand{\smalltitle}[1]{\def\@smalltitle{#1}}
 \newcommand{\vol}[1]{\def\@vol{#1}}
+\newcommand{\issue}[1]{\def\@issue{#1}}
+\newcommand{\monthyear}[1]{\def\@monthyear{#1}}
 
 \pagestyle{fancy}
    \pagenumbering{arabic}
@@ -229,13 +278,13 @@
     \ifdefequal{#1}{\FAPETConference}{%  % Si se selecciona FAPET Conference
         % Configuración para conferencias (amarillo)
         \def\rhotheme{rhoyellow}% Color amarillo
-        \def\logofile{fapet-rho-class/RMXAA-horizontal-amarillo.jpg}% Logo amarillo
+        \def\logofile{fapet-rho-class/isstap.png}% Logo amarillo
         \def\templatetype{FAPET Conference}% Tipo de plantilla
     }{%  % Caso predeterminado: FAPET (artículos)
         % Configuración predeterminada para artículos (azul)
         \def\rhotheme{rhocolor}% Color azul
         %\def\logofile{fapet-rho-class/LogoFAPETazul.jpg}% Logo azul
-        \def\logofile{fapet-rho-class/rmxaa-horizontal-azul.png}% Logo azul
+        \def\logofile{fapet-rho-class/isstap.png}% Logo azul
         \def\templatetype{FAPET}% Tipo de plantilla
     }%
 }
@@ -279,10 +328,9 @@
 
 % Abstract text style new commands
 \newcommand{\keywords}[1]{\def\@keywords{#1}}
-\newcommand{\pclave}[1]{\def\@pclave{#1}}
 \newcommand{\absfont}{\noindent\color{black}\justifying\normalfont\sffamily\linespread{1}\fontsize{8.5}{11}\selectfont}
 \newcommand{\absheadfont}{\color{\rhotheme}\normalfont\sffamily\fontsize{9}{11}\selectfont}
-\newcommand{\keywordsfont}{\noindent\normalfont\sffamily\itshape\linespread{1}\fontsize{7.8}{9}\selectfont}
+\newcommand{\keywordsfont}{\noindent\normalfont\sffamily\linespread{1.2}\fontsize{7.8}{9}\selectfont}
 \newcommand{\keywordheadfont}{\normalfont\sffamily\fontsize{7.8}{9}\selectfont\bfseries}
 
 % Abstract definition
@@ -298,47 +346,41 @@
     \let\go\relax\fi
 \go}
 
-% Resumen definition
-\def\xresumen{resumen}
-\long\def\resumen#1\end#2{
-    \def\two{#2}\ifx\two\xresumen
-    \long\gdef\elresumen{\ignorespaces#1}
-    \def\go{\end{resumen}}
-\else
-    #1\end{#2}
-    \gdef\elresumen{\vskip12pt 
-    \vskip12pt}
-    \let\go\relax\fi
-\go}
-
 % Rho class abstract style 
 \newcommand{\rhoabstract}{
-    \begin{tcolorbox}[colback=\rhotheme!22, arc=0pt, boxrule=0pt, left=5pt, right=5pt, top=5pt, bottom=5pt]
-        \ifx\@keywords\undefined
-            \absheadfont\bfseries\abstractname\vskip0.5em\absfont\theabstract\vskip10pt
-        \else
-            \absheadfont\bfseries\abstractname\vskip0.5em\absfont\theabstract\vskip10pt
-%            \keywordsfont\keywordname\hspace{0.1em}\keywordsfont\@keywords
-        \fi
-    \end{tcolorbox}
-}
-
-% Rho class Spanish resumen 
-\newcommand{\rhoresumen}{
-    \begin{tcolorbox}[colback=\rhotheme!22, arc=0pt, boxrule=0pt, left=5pt, right=5pt, top=5pt, bottom=5pt]
-        \ifx\@pclave\undefined
-            \absheadfont\bfseries\resumenname\vskip0.5em\absfont\elresumen\vskip10pt
-        \else
-            \absheadfont\bfseries\resumenname\vskip0.5em\absfont\elresumen\vskip10pt
-            \keywordsfont\pclavename\hspace{0.1em}\keywordsfont\@pclave
-        \fi
-    \end{tcolorbox}
+    \begin{minipage}[t]{0.68\textwidth}
+        \vspace{0pt}
+        \begin{tcolorbox}[colback=\rhotheme!8, arc=0pt, boxrule=0pt, left=5pt, right=5pt, top=5pt, bottom=5pt]
+            \absheadfont\bfseries ABSTRACT\vskip0.5em\absfont\theabstract
+        \end{tcolorbox}
+    \end{minipage}%
+    \hfill
+    \begin{minipage}[t]{0.29\textwidth}
+        \vspace{0pt}
+        \raggedright
+        {\color{\rhotheme}\keywordheadfont KEYWORDS}\par
+        \vskip2pt
+        {\keywordsfont\ifx\@keywords\undefined\else\@keywords\fi}\par
+        \vskip8pt
+        {\color{\rhotheme}\keywordheadfont CORRESPONDING AUTHOR}\par
+        \vskip2pt
+        {\rhoinfofont
+            {\ifx\@corres\undefined\else\@corres\par\fi} 
+            {\ifx\@email\undefined\else\textcolor{rhocolor}{\itshape}\@email\par\fi}
+        }
+        \vskip8pt
+        {\color{\rhotheme}\keywordheadfont ARTICLE HISTORY}\par
+        \vskip2pt
+        {\rhoinfofont
+            {\ifx\@received\undefined\else{\bfseries\ignorespaces\receivedlanguage}\@received\par\fi}
+            {\ifx\@accepted\undefined\else{\bfseries\ignorespaces\acceptedlanguage}\@accepted\par\fi}
+        }
+    \end{minipage}
 }
 %----------------------------------------------------------
-% RESUMEN-, ABTRACT-, NEWBOOL
+% ABTRACT-, NEWBOOL
 %----------------------------------------------------------
 
-\newbool{rho-resumen}
 \newbool{rho-abstract}
 
 
@@ -353,36 +395,32 @@
 \renewcommand{\@maketitle}{
     \bgroup
         \setlength{\parindent}{0pt}
-            \begin{minipage}[t]{\textwidth} 
+            \begin{minipage}[t]{0.75\textwidth} 
                 \RaggedRight
-                {\bfseries\sffamily\small Revista Mexicana de Astronomía y Astrofísica,~\@vol,~\@pages,~(\@thisyear)}\par
-                \vspace{2pt}
-                {\small\bfseries\sffamily\copyright ~\@thisyear ~Instituto de Astronomía, Universidad Nacional Autónoma de México \\ OPEN ACCESS~~{\bfseries \@doi}} 
+                {\bfseries\sffamily\fontsize{10}{12}\selectfont Buletin Peternakan~\@vol(\@issue):~\@pages,~\@monthyear}\par
+                \vspace{1pt}
+                {\bfseries\sffamily\fontsize{10}{12}\selectfont Bulletin of Animal Science}\par
+                \vspace{1pt}
+                {\small\sffamily ISSN-0126-4400/E-ISSN-2407-876X}\par
+                \vspace{1pt}
+                {\small\sffamily Accredited: 36a/E/KPT/2016}\par
+                \vspace{1pt}
+                {\small\sffamily\@doi}
             \end{minipage}
         \hfill
-            \begin{minipage}[t]{\textwidth} 
-                \RaggedLeft
-                \vspace*{-3.39\baselineskip}
-                %\includegraphics[width=1.2217in, height=0.4329in]
-                 \includegraphics[width=1.45in, height=0.5031in]
-                {\logofile}
-            \end{minipage}
-        \vskip15pt
-            {\RaggedRight\bfseries\fontsize{20}{25}\selectfont\@title\par}
+        \begin{minipage}[t]{0.23\textwidth}
+            \vspace{0pt}
+            \RaggedLeft
+            \includegraphics[width=\linewidth, keepaspectratio]{\logofile}
+        \end{minipage}
+        \vskip8pt
+        {\color{rhocolor}\hrule height 1.5pt}
+        \vskip18pt
+            {\RaggedRight\color{rhocolor}\fontseries{mb}\selectfont\fontsize{20}{25}\selectfont\@title\par}
         \vskip10pt
             {\RaggedRight\@author\par}
-            \vskip7pt
-        \ifx\@keywords\undefined
-            \vskip5pt
-        \else
-            \keywordsfont\keywordname\hspace{0.1em}\keywordsfont\@keywords\vskip10pt
-        \fi            
-        \vskip5pt            
+        \vskip12pt            
         {\ifbool{rho-abstract}{\rhoabstract}{}}
-        {\ifbool{rho-resumen}{\rhoresumen}{}}
-%           {\rhoabstract}
-%            {\rhoresumen}
-            {\RaggedRight\rhoinfo}
     \egroup
     \vskip8pt
 }
@@ -393,7 +431,7 @@
 
 \setlength{\affilsep}{9pt}
 \renewcommand\Authfont{\fontsize{11}{11}\bfseries\sffamily\selectfont}
-\renewcommand\Affilfont{\fontsize{8.5}{9}\it\selectfont}
+\renewcommand\Affilfont{\fontsize{8.5}{10.5}\selectfont}
 \renewcommand\AB@affilsep{\reset@font\protect\Affilfont}
 \renewcommand\AB@affilsepx{\reset@font\protect\\\protect\Affilfont}
 % \renewcommand\AB@affilsepx{, \protect\Affilfont}
